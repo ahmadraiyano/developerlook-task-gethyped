@@ -8,6 +8,7 @@ import Section from './components/Section';
 import ExpertiseCards from './components/ExpertiseCards';
 import ContentSection from './components/ContentSection';
 import Brands from './components/Brands';
+import Footer from './components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,6 +28,10 @@ const App = () => {
       
     </main>
       <Brands></Brands>
+      <footer className='w-11/12 mx-auto mt-20'>
+        <div className='divider m-0'></div>
+        <Footer></Footer>
+      </footer>
     </>
   );
 };

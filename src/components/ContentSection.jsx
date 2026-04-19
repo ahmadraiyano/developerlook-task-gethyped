@@ -22,7 +22,7 @@ const ContentSection = () => {
             Wij vertellen jouw verhaal. Op een manier die écht past bij jouw
             doelgroep. Met creatieve content die werkt en het verschil maakt.
           </p>
-          <button className="btn btn-outline text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
+          <button className="btn btn-outline h-12 rounded-xl text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
             Bekijk al ons werk{" "}
             <span className="bg-black text-white p-1 rounded-md">
               <FaArrowRight />

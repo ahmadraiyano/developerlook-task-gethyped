@@ -17,7 +17,7 @@ const ExpertiseCard = forwardRef(({ card }, ref) => {
         <div className="w-xl">
           <h3 className="font-semibold text-4xl">{title}</h3>
           <p className="text-3xl mb-4">{para}</p>
-          <button className="btn btn-outline text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
+          <button className="btn btn-outline h-12 rounded-xl text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
             {btnText}
             <span className="bg-black text-white p-1 rounded-md">
               <FaArrowRight />

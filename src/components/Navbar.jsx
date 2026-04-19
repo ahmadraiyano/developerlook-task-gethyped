@@ -98,7 +98,7 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="navbar-end">
-              <button className="hidden lg:flex btn bg-[#FCB8FA] h-12 font-bold rounded-xl text-lg transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">Get Results <span className="bg-amber-50 rounded-lg p-2 hover:p-1 text-xl text-orange-500"><BsFire /></span></button>
+              <button className="hidden lg:flex btn bg-[#FCB8FA] h-12 font-bold rounded-xl text-lg transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">Get Results <span className="bg-amber-50 rounded-lg p-2 text-xl text-orange-500"><BsFire /></span></button>
               <label htmlFor="sticky-navbar-toggle" className="btn btn-ghost lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

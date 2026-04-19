@@ -17,3 +17,9 @@ body {
   background-color: #FAF4EC;
   font-family: "Schibsted Grotesk", sans-serif;
 }
+.shape {
+  --p: 70px;
+  height: 500px;
+  aspect-ratio: 1;
+  clip-path: polygon(0 77%, 100% 25%, 100% 100%, 0% 100%);
+}

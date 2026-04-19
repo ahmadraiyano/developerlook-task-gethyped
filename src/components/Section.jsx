@@ -15,7 +15,7 @@ const Section = () => {
                 </div>
                 <div className='w-4/12 text-3xl font-semibold'>
                     <p>We stoppen niet bij mooie plaatjes en vette beelden. We maken het meetbaar. Zo weet je precies wat werkt en wat niet. Nooit meer content zonder strategie. Nooit meer content zonder resultaat.</p>
-                    <button className='mt-4 btn btn-outline text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4'>Leer ons kennen <span className='bg-black text-white p-1 rounded-md'><FaArrowRight /></span></button>
+                    <button className='mt-4 h-12 rounded-xl btn btn-outline text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4'>Leer ons kennen <span className='bg-black text-white p-1 rounded-md'><FaArrowRight /></span></button>
                 </div>
                 <div className='w-3/12 flex justify-center'>
                     <a href="#expertise" className='btn btn-outline text-orange-400 text-xl'><FaArrowDown /></a>
