@@ -15,10 +15,10 @@ const Section = () => {
                 </div>
                 <div className='w-5/12 text-2xl font-semibold'>
                     <p>We stoppen niet bij mooie plaatjes en vette beelden. We maken het meetbaar. Zo weet je precies wat werkt en wat niet. Nooit meer content zonder strategie. Nooit meer content zonder resultaat.</p>
-                    <button className='btn btn-outline'>Leer ons kennen <span className='bg-black text-white'><FaArrowRight /></span></button>
+                    <button className='btn btn-outline text-xl'>Leer ons kennen <span className='bg-black text-white p-1 rounded-md'><FaArrowRight /></span></button>
                 </div>
                 <div className='w-3/12 flex justify-center'>
-                    <a href="#expertise" className='btn btn-outline text-orange-400'><FaArrowDown /></a>
+                    <a href="#expertise" className='btn btn-outline text-orange-400 text-xl'><FaArrowDown /></a>
                 </div>
             </div>
         </div>

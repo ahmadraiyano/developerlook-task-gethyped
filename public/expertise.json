@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "heading": "Social strategy",
+        "title": "Slimme strategie. Sterke start.",
+        "para": "We duiken diep in jouw merk, doelgroep en doelen. En vertalen data naar een duidelijk plan met formats die écht impact maken. Zo weet je precies waarom het werkt.",
+        "video": "https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4",
+        "btnText": "Meer over social strategy",
+        "bg": "bg-[#FFFFFF]"
+    },
+    {
+        "id": 2,
+        "heading": "Content creation",
+        "title": "Content die opvalt en raakt.",
+        "para": "We maken content die opvalt. Blijft hangen. En jouw doelgroep raakt. Creatief, snel en energiek. Altijd met het doel voor ogen.",
+        "video": "https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4",
+        "btnText": "Meer over content creatie",
+        "bg": "bg-[#FCB8FA]"
+    },
+    {
+        "id": 3,
+        "heading": "Activation",
+        "title": "Zichtbaar waar en wanneer het telt.",
+        "para": "De juiste content verdient het om gezien te worden. We verspreiden de content waar jouw doelgroep is. Zo raakt jouw merk de juiste mensen, precies waar en wanneer het telt.",
+        "video": "https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4",
+        "btnText": "Meer over activatie",
+        "bg": "bg-[#33C791]"
+    },
+    {
+        "id": 4,
+        "heading": "Data",
+        "title": "Inzichten die impact maken.",
+        "para": "We duiken in de cijfers om te snappen wat écht werkt. En sturen jouw content scherp bij.",
+        "video": "https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4",
+        "btnText": "Meer over data",
+        "bg": "bg-[#0D8DFF]"
+    }
+]
