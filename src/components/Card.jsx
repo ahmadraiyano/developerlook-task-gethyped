@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({cardInfo}) => {
-  console.log(cardInfo)
   return (
     <div className={`w-96 mx-auto border-8 p-10 ${cardInfo.bg} border-white rounded-[44px] aspect-3.5/5 rotate-3 flex flex-col justify-between`}>
       <div>
