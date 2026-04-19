@@ -15,6 +15,7 @@ const dataPromise = fetch("/expertise.json").then(res=>res.json())
 
 const App = () => {
   return (
+    <>
     <main className='w-11/12 mx-auto scrollbar-hide'>
       <Navbar></Navbar>
       <Hero></Hero>
@@ -23,9 +24,10 @@ const App = () => {
         <ExpertiseCards dataPromise={dataPromise}></ExpertiseCards>
       </Suspense>
       <ContentSection></ContentSection>
-      <Brands></Brands>
       
     </main>
+      <Brands></Brands>
+    </>
   );
 };
 

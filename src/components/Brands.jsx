@@ -1,5 +1,7 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
+import MarqueeImport from "react-fast-marquee";
+
+const Marquee = MarqueeImport.default;
 
 const Brands = () => {
   const brands = [
@@ -16,19 +18,21 @@ const Brands = () => {
     "https://cdn.prod.website-files.com/6848603da8e6ac95794b74a9/6849d880bed5996600cbc586_seesing-flex.svg",
   ];
   return (
-    <div>
-      <div>
+    <div className="mt-20">
+      <div className="w-10/12 mx-auto mb-20">
         <h2 className="text-7xl font-semibold">
           These brands <br /> got hyped.
         </h2>
       </div>
-      <div className="flex gap-4">
-        {brands.map((brand, i) => (
-          <div key={i} className="border border-black">
-            <img src={brand} />
-          </div>
-        ))}
+      <Marquee speed="100" pauseOnHover="true">
+  <div className="flex gap-5 px-5">
+    {brands.map((brand, i) => (
+      <div key={i} className="border border-black">
+        <img src={brand} />
       </div>
+    ))}
+  </div>
+</Marquee>
       
     </div>
   );
