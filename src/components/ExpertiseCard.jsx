@@ -1,10 +1,11 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
-const ExpertiseCard = ({ card }) => {
+const ExpertiseCard = forwardRef(({ card }, ref) => {
   const { heading, para, title, video, btnText, bg, id } = card;
   return (
     <div
+      ref={ref} // ✅ attach ref to the root div
       id="expertise"
       className={`flex ${bg} justify-between p-20 rounded-4xl`}
     >
@@ -16,7 +17,7 @@ const ExpertiseCard = ({ card }) => {
         <div className="w-xl">
           <h3 className="font-semibold text-4xl">{title}</h3>
           <p className="text-3xl mb-4">{para}</p>
-          <button className="btn btn-outline text-xl">
+          <button className="btn btn-outline text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
             {btnText}
             <span className="bg-black text-white p-1 rounded-md">
               <FaArrowRight />
@@ -38,6 +39,8 @@ const ExpertiseCard = ({ card }) => {
       </div>
     </div>
   );
-};
+});
+
+ExpertiseCard.displayName = "ExpertiseCard"; // ✅ helps with React DevTools debugging
 
 export default ExpertiseCard;

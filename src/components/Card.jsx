@@ -1,25 +1,19 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({cardInfo}) => {
+  console.log(cardInfo)
   return (
-    <div className="card bg-base-100 shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">Card Title</h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
+    <div className={`w-96 mx-auto border-8 p-10 ${cardInfo.bg} border-white rounded-[44px] aspect-3.5/5 rotate-3 flex flex-col justify-between`}>
+      <div>
+        <p className="font-bold text-7xl">{cardInfo.stat}</p>
       </div>
-    </div>
+      <div>
+        <h2 className="font-semibold text-3xl">{cardInfo.title}</h2>
+        <div className="divider m-0"></div>
+        <p className="font-semibold text-xl">{cardInfo.para}</p>
+      </div>
+          
+        </div>
   );
 };
 
