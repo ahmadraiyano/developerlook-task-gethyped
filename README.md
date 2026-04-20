@@ -11,7 +11,7 @@ Professional frontend recreation of the Get Hyped (gethyped.nl) homepage, built 
 
 This project is a **professional frontend recreation** of the Get Hyped digital agency homepage (https://www.gethyped.nl/). Created as a recruitment task for the **Junior MERN Developer position at DeveloperLook**, the project demonstrates modern web development practices with a focus on:
 
-- **Pixel-perfect design accuracy** - Closely matching the original website
+- **design accuracy** - Closely matching the original website
 - **Responsive mobile design** - Full mobile optimization
 - **Smooth animations** - Professional GSAP animations
 - **Clean code** - Well-organized, maintainable React components
@@ -30,7 +30,6 @@ This project is a **professional frontend recreation** of the Get Hyped digital 
 - **Position:** Junior MERN Developer
 - **Task Due Date:** April 20, 2026
 - **Status:** ✅ Completed & Submitted
-- **Submission Link:** https://forms.gle/gxLgZDjuCLTPmunk9
 
 ---
 
@@ -80,7 +79,7 @@ This project is a **professional frontend recreation** of the Get Hyped digital 
 ## 🛠 Tech Stack
 
 ### Frontend Framework
-- **React 18+** - UI library with hooks
+- **React 19** - UI library with hooks
 - **React DOM** - DOM rendering
 
 ### Styling & UI
@@ -122,7 +121,7 @@ This project is a **professional frontend recreation** of the Get Hyped digital 
 ### Build & Deployment
 - **Vite 4.x** - Fast build tool
 - **Netlify** - Hosting and CI/CD
-- **npm/yarn** - Package management
+- **npm** - Package management
 
 ---
 
@@ -510,7 +509,6 @@ The recreation focuses on matching:
 **Position:** Junior MERN Developer  
 **Task:** Homepage Recreation  
 **Submission Date:** April 20, 2026  
-**Submission Form:** https://forms.gle/gxLgZDjuCLTPmunk9
 
 ---
 
