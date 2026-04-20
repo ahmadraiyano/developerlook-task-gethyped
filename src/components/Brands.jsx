@@ -20,14 +20,14 @@ const Brands = () => {
   return (
     <div className="mt-20">
       <div className="w-10/12 mx-auto mb-20">
-        <h2 className="text-7xl font-semibold">
+        <h2 className="text-4xl md:text-7xl font-semibold">
           These brands <br /> got hyped.
         </h2>
       </div>
       <Marquee speed="100" pauseOnHover="true">
-  <div className="flex gap-5 px-5">
+  <div className="flex gap-2 md:gap-5 px-2 md:px-5">
     {brands.map((brand, i) => (
-      <div key={i} className="border border-black">
+      <div key={i} className="border border-black w-28 md:w-44 lg:w-56 xl:w-76">
         <img src={brand} />
       </div>
     ))}

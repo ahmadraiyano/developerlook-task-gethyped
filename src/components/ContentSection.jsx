@@ -2,104 +2,121 @@ import React, { useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 
 const ContentSection = () => {
-  const videoRef1 = useRef(null);
-  const videoRef2 = useRef(null);
-  const videoRef3 = useRef(null);
+  const videoRefs = useRef([]);
 
-  const handleMouseEnter = (ref) => {
-    ref.current?.play();
+  const handleMouseEnter = (index) => {
+    const vid = videoRefs.current[index];
+    if (vid) {
+      vid.currentTime = 0;
+      vid.play();
+    }
   };
 
-  const handleMouseLeave = (ref) => {
-    ref.current?.pause();
+  const handleMouseLeave = (index) => {
+    videoRefs.current[index]?.pause();
   };
+
+  const isMobile =
+    typeof window !== "undefined" && window.innerWidth < 640;
+
+  const videoCardsData = [
+    {
+      borderColor: "border-[#FA5424]",
+      bgColor: "bg-[#FA5424]",
+      buttonColor: "bg-[#FC997B]",
+      video:
+        "https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4",
+      title: "Van nul naar vol,",
+      subtitle: "binnen 3 weken",
+      label: "Bullit",
+    },
+    {
+      borderColor: "border-[#0D8DFF]",
+      bgColor: "bg-[#0D8DFF]",
+      buttonColor: "bg-[#28AAFF]",
+      video:
+        "https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4",
+      title: "Zacht in smaakt,",
+      subtitle: "sterk in beeld",
+      label: "Roasta",
+    },
+    {
+      borderColor: "border-[#33C791]",
+      bgColor: "bg-[#33C791]",
+      buttonColor: "bg-[#73E2B6]",
+      video:
+        "https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4",
+      title: "Content die echt",
+      subtitle: "smaakt (en raakt)",
+      label: "Loco",
+    },
+  ];
+
   return (
-    <div className="mt-20">
-      <div className="w-4/12 ml-20">
-        <h2 className="text-8xl font-semibold">Content dat scoort.</h2>
-        <div className="w-full text-2xl font-semibold">
-          <p className="my-4">
-            Wij vertellen jouw verhaal. Op een manier die écht past bij jouw
-            doelgroep. Met creatieve content die werkt en het verschil maakt.
-          </p>
-          <button className="btn btn-outline h-12 rounded-xl text-xl transition-transform duration-500 ease-in-out skew-0 hover:-skew-4">
-            Bekijk al ons werk{" "}
-            <span className="bg-black text-white p-1 rounded-md">
-              <FaArrowRight />
-            </span>
-          </button>
-        </div>
+    <div className="w-full py-16 px-4 md:px-10 lg:px-16">
+      {/* Header */}
+      <div className="mb-16 max-w-4xl">
+        <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          Content dat scoort.
+        </h2>
+        <p className="text-lg md:text-xl text-gray-700 mb-6">
+          Wij vertellen jouw verhaal. Op een manier die écht past bij jouw
+          doelgroep. Met creatieve content die werkt en het verschil maakt.
+        </p>
+
+        <button className="btn btn-outline flex items-center gap-2 hover:-skew-3 transition-all">
+          Bekijk al ons werk
+          <span className="bg-black text-white p-1 rounded">
+            <FaArrowRight size={14} />
+          </span>
+        </button>
       </div>
-      <div className="flex justify-around">
-        <div className="mt-60">
+
+      {/* Cards */}
+      <div className="flex flex-col md:flex-row md:justify-around gap-10">
+        {videoCardsData.map((card, index) => (
           <div
-            className="w-full max-w-md mx-auto border-8 border-[#FA5424] rounded-[44px] aspect-4/5 rotate-0 hover:-rotate-3"
-            onMouseEnter={() => handleMouseEnter(videoRef1)}
-            onMouseLeave={() => handleMouseLeave(videoRef1)}
+            key={index}
+            className={`${
+              index === 0
+                ? "md:mt-40"
+                : index === 1
+                ? "md:mt-20"
+                : ""
+            }`}
           >
-            <video
-              ref={videoRef1}
-              className="w-full h-full object-cover rounded-[36px]"
-              src="https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4"
-              muted
-              loop
-            />
-            <div className="bg-[#FA5424] absolute p-4 rounded-2xl bottom-8 left-8 text-white w-10/12">
-              <p className="font-bold text-3xl">
-                Van nul naar vol, <br /> binnen 3 weken
-              </p>
-              <button className="btn btn-outline border-0 bg-[#FC997B] mt-4">
-                Bullit
-              </button>
+            <div
+              className={`w-full max-w-sm ${card.borderColor} border-8 rounded-[40px] aspect-[4/5] relative overflow-hidden cursor-pointer transition hover:-rotate-2 shadow-lg hover:shadow-2xl`}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
+              <video
+                ref={(el) => (videoRefs.current[index] = el)}
+                className="w-full h-full object-cover rounded-[32px]"
+                src={card.video}
+                muted
+                loop
+                playsInline
+                autoPlay={isMobile}
+                preload="none"
+              />
+
+              <div
+                className={`${card.bgColor} absolute bottom-6 left-6 p-4 rounded-xl text-white w-10/12`}
+              >
+                <p className="font-bold text-xl md:text-2xl leading-snug">
+                  {card.title} <br /> {card.subtitle}
+                </p>
+
+                <button
+                  className={`mt-3 px-3 py-1 rounded ${card.buttonColor} text-black font-semibold`}
+                >
+                  {card.label}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="mt-30">
-          <div
-            className="w-full max-w-md mx-auto border-8 border-[#0D8DFF] rounded-[44px] aspect-4/5 rotate-0 hover:-rotate-3"
-            onMouseEnter={() => handleMouseEnter(videoRef2)}
-            onMouseLeave={() => handleMouseLeave(videoRef2)}
-          >
-            <video
-              ref={videoRef2}
-              className="w-full h-full object-cover rounded-[36px]"
-              src="https://gethyped.b-cdn.net/Petrol%20Head/petrolhead-loop.mp4"
-              muted
-              loop
-            />
-            <div className="bg-[#0D8DFF] absolute p-4 rounded-2xl bottom-8 left-8 text-white w-10/12">
-              <p className="font-bold text-3xl">
-                Zacht in smaakt, <br /> sterk in beeld
-              </p>
-              <button className="btn btn-outline border-0 bg-[#28AAFF] mt-4">
-                Roasta
-              </button>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div
-            className="w-full max-w-md mx-auto border-8 border-[#33C791] rounded-[44px] aspect-4/5 rotate-0 hover:-rotate-3 relative"
-            onMouseEnter={() => handleMouseEnter(videoRef3)}
-            onMouseLeave={() => handleMouseLeave(videoRef3)}
-          >
-            <video
-              ref={videoRef3}
-              className="w-full h-full object-cover rounded-[36px]"
-              src="https://gethyped.b-cdn.net/Salontopper/Loop%20Salontopper.mp4"
-              muted
-              loop
-            />
-            <div className="bg-[#33C791] absolute p-4 rounded-2xl bottom-8 left-8 text-white w-10/12">
-              <p className="font-bold text-3xl">
-                Content die echt <br /> smaakt (en raakt)
-              </p>
-              <button className="btn btn-outline border-0 bg-[#73E2B6] mt-4">
-                Loco
-              </button>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
